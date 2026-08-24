@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Construindo layout errado</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <!-- Layout errado: 
+        Estrutura de divs aninhadas, 
+        sem semântica, 
+        difícil de manter, 
+        pouco acessível,
+        os robos não conseguem interpretar bem,
+        prejudicando o SEO (search engine optimization) -->
+    <div id="base">
+        <div id="cabecalho">
+            <div id="logo">
+                logo
+            </div>
+            <div id="menu">
+                menu
+            </div>
+        </div>
+        <div id="principal">
+            <div id="conteudo">
+                <p>Conteúdo principal</p>
+            </div>
+            <div id="lateral">
+                <p>Conteúdo lateral</p>
+            </div>
+        </div>
+        <div id="rodape">
+            <p>Rodapé</p>
+        </div>
+    </div>
+</body>
+</html>
