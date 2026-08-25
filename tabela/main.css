@@ -1,0 +1,23 @@
+body{
+	background-color: #555;
+	color:#555
+}
+table{
+	background-color: #fff;
+	color:#000;
+	border: 1px solid #000;
+	padding:10px;
+	box-shadow: 0px 0px 10px #000;
+	border-collapse	: collapse;
+}
+table td{
+	padding:10px;
+	border-bottom: 1px solid #000;
+}
+table tr:nth-child(even) td{
+	background-color: #999;	
+}
+thead{
+	background-color: #000;
+	color:#fff;
+}

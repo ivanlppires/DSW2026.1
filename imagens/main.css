@@ -1,0 +1,12 @@
+/* Tema dark */
+body {
+	background-color: #121212;
+	color: #e0e0e0;
+}
+
+/* Imagens em tamanho médio */
+img {
+	width: 300px;
+	height: auto;
+	display: block;
+}
