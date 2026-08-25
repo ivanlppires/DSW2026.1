@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Listas</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <h1>Listas</h1>
+    <!-- lista não ordem: ul - unordered list -->
+    <ul type="circle">
+        <li>Item 1</li>
+        <li>
+            <ul type="square">
+                <li>Item 2.1</li>
+                <li>Item 2.2</li>
+            </ul>
+        </li>
+        <li>Item 3</li>
+    </ul>
+    <!-- lista ordenada: ol - ordered list -->
+    <ol type="a">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <!-- fazendo menu com listas-->
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+    <!-- 
+    Qual a diferença entre ul, ol e dl?
+    ul - lista não ordenada (unordered list)
+    ol - lista ordenada (ordered list)
+    dl - lista de definição (definition list) 
+     
+    -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para web</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de estilo para web</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para web</dd>
+    </dl>
+</body>
+
+</html>
