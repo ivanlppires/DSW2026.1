@@ -1,0 +1,15 @@
+*{
+    background-color: #333;
+    color:#fff;
+}
+
+fieldset{
+    display:flex;
+    flex-direction: column;
+}
+input{
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid orange;
+}
