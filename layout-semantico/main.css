@@ -9,7 +9,7 @@ body {
     color: #fff;
 }
 
-div#cabecalho {
+header {
     background-color: #888;
     height: 60px;
     width: 100%;
@@ -17,34 +17,47 @@ div#cabecalho {
     position: relative;
     display: flex;
 }
-div#logo{
+header img{
     background-color: teal;
     width: 20%;
     height: 60px;
 }
-div#menu {
+nav{
     background-color:darkorange;
     width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
     height: 60px;
 }
-div#principal {
+nav a:hover{
+    background-color: #000;
+    opacity: 0.5;
+    color:#fff;
+}
+main {
     background-color: #555;
     display: flex;
 }
-div#conteudo {
+section {
     background-color: #666;
     width: 80%;
     padding-top: 60px;
     min-height: 800px;
 }
-div#lateral {
+aside {
     background-color: #777;
     width: 20%;
     padding-top: 60px;
     min-height: 800px;
 }
 
-div#rodape {
+footer {
     background-color: #222;
     height: 30px;
     width: 100%;
