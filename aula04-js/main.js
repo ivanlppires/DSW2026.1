@@ -1,4 +1,5 @@
 // Elementos input do formulário
+const inputId = document.querySelector('#clienteId');
 const inputNome = document.querySelector('#nome');
 const inputEmail = document.querySelector('#email');
 const inputTelefone = document.querySelector('#telefone');
@@ -9,13 +10,27 @@ const btnSalvar = document.querySelector('#btnSalvar');
 // Adiciona um evento de clique ao botão de salvar
 btnSalvar.addEventListener('click', (e) => {
     e.preventDefault(); // evita que o formulário seja enviado por padrão.
-    const cliente = {
-        id: Date.now(), // Gera um ID único baseado no timestamp atual
-        nome: inputNome.value,
-        email: inputEmail.value,
-        telefone: inputTelefone.value
+
+    if (inputId.value === '') {
+        /* CRIAR NOVO CLIENTE */
+        const cliente = {
+            id: Date.now(), // Gera um ID único baseado no timestamp atual
+            nome: inputNome.value,
+            email: inputEmail.value,
+            telefone: inputTelefone.value
+        }
+        // adicione um novo cliente ao vetor de clientes
+        clientes.push(cliente); // Adiciona o cliente ao vetor de clientes
+    }else{
+        /* ATUALIZAR CLIENTE EXISTENTE */
+        const cliente = clientes.find(cliente => cliente.id === parseInt(inputId.value));
+        if (cliente) {
+            cliente.nome = inputNome.value;
+            cliente.email = inputEmail.value;
+            cliente.telefone = inputTelefone.value;
+        }
     }
-    clientes.push(cliente); // Adiciona o cliente ao vetor de clientes
+
     document.querySelector('#formCliente').reset(); // Limpa o formulário após salvar
     atualizarTabela(); // Atualiza a tabela de clientesss
 });
@@ -56,4 +71,14 @@ const removerCliente = (id) => {
 
     // atualizar a tabela
     atualizarTabela();
+}
+
+const editarCliente = (id) => {
+    // Buscar o cliente pelo ID
+    const cliente = clientes.find(cliente => cliente.id === id);
+    // Preencher os campos do formulário com os dados do cliente
+    inputId.value = cliente.id;
+    inputNome.value = cliente.nome;
+    inputEmail.value = cliente.email;
+    inputTelefone.value = cliente.telefone;
 }
