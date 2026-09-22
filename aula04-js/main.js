@@ -46,8 +46,7 @@ const atualizarTabela = () => {
 }
 
 const removerCliente = (id) => {
-    // remover do vetor de clientes o cliente com o id informado
-    
+
     // remover com o filter
     //const clientesFiltrados = clientes.filter(cliente => cliente.id !== id);
 
