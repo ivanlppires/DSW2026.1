@@ -17,8 +17,31 @@ btnSalvar.addEventListener('click', (e) => {
     }
     clientes.push(cliente); // Adiciona o cliente ao vetor de clientes
     document.querySelector('#formCliente').reset(); // Limpa o formulário após salvar
-    console.log(clientes); // Exibe o vetor de clientes no console para verificação
+    atualizarTabela(); // Atualiza a tabela de clientesss
 });
 
 // Vetor de clientes (objeto cliente: {id, nome, email, telefone})
 const clientes = [];
+
+// Bucar o tbody da tabela de clientes
+const tbodyClientes = document.querySelector('#tabelaClientes');
+
+// Função para atualizar a tabela de clientes
+const atualizarTabela = () => {
+    tbodyClientes.innerHTML = ''; // Limpa o conteúdo atual do tbody
+    clientes.forEach(cliente => {
+        const tr = document.createElement('tr'); // Cria uma nova linha na tabela
+        tr.innerHTML = `
+            <td>${cliente.id}</td>
+            <td>${cliente.nome}</td>
+            <td>${cliente.email}</td>
+            <td>${cliente.telefone}</td>
+            <td>
+                <button class="btn btn-primary btn-sm me-1" onclick="editarCliente(${cliente.id})">Editar</button>
+                <button class="btn btn-danger btn-sm" onclick="removerCliente(${cliente.id})">Remover</button>
+            </td>
+        `;
+        tbodyClientes.appendChild(tr); // Adiciona a nova linha ao tbody
+
+    });
+}
