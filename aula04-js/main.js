@@ -42,6 +42,19 @@ const atualizarTabela = () => {
             </td>
         `;
         tbodyClientes.appendChild(tr); // Adiciona a nova linha ao tbody
-
     });
+}
+
+const removerCliente = (id) => {
+    // remover do vetor de clientes o cliente com o id informado
+    
+    // remover com o filter
+    //const clientesFiltrados = clientes.filter(cliente => cliente.id !== id);
+
+    // remover com o splice
+    const index = clientes.findIndex(cliente => cliente.id === id);
+    if (index !== -1) clientes.splice(index, 1);
+
+    // atualizar a tabela
+    atualizarTabela();
 }
