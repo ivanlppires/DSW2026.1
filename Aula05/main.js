@@ -80,3 +80,18 @@ btnBuscarCep.addEventListener('click', async (event) => {
         document.querySelector('#uf').value = uf;
     }
 })
+
+/*
+ API do IBGE (SIDRA) - Efetivo de rebanhos (Pesquisa da Pecuária Municipal)
+ Tabela 3939 - Efetivo dos rebanhos, por tipo de rebanho
+ Variável 105 = Efetivo dos rebanhos (Cabeças)
+ Categoria 2670 = Bovino
+ Substitua {idMunicipio} pelo código do município no IBGE (ex: 5103403 para Cuiabá)
+ O id do município de Sinop (MT) no IBGE é 5107925
+
+
+
+ Exemplo de URL:
+ https://servicodados.ibge.gov.br/api/v3/agregados/3939/periodos/-6/variaveis/105?localidades=N6[5107925]&classificacao=79[2670]
+*/
+
