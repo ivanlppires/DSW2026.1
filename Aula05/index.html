@@ -39,6 +39,41 @@
                 </div>
             </div>
         </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">Busca de Endereço por CEP</h2>
+                        <form id="form-cep">
+                            <div class="mb-3">
+                                <label for="cep" class="form-label">CEP</label>
+                                <input type="text" id="cep" name="cep" class="form-control" placeholder="00000-000" maxlength="9" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 mb-4" id="BuscarCep">Buscar</button>
+
+                            <div class="mb-3">
+                                <label for="logradouro" class="form-label">Logradouro</label>
+                                <input type="text" id="logradouro" name="logradouro" class="form-control" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bairro" class="form-label">Bairro</label>
+                                <input type="text" id="bairro" name="bairro" class="form-control" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cidade-cep" class="form-label">Cidade</label>
+                                <input type="text" id="cidade-cep" name="cidade-cep" class="form-control" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="uf" class="form-label">UF</label>
+                                <input type="text" id="uf" name="uf" class="form-control" readonly>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
