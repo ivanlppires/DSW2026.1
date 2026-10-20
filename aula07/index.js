@@ -9,6 +9,6 @@ router.use('/alunos', alunos);
 //router.use('/cursos', cursos);
 
 /* CRIE AS ROTAS DE CURSOS COM CRUD E BUSCA POR 
-ID, NOME (ASCEDENTE E DESCENDENTE) E CARGA HORÁRIA */
+ID, NOME (ASCENDENTE E DESCENDENTE) E CARGA HORÁRIA */
 
 export default router;
