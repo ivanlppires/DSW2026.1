@@ -5,7 +5,7 @@ import {
     buscaAluno,
     criaAluno,
     atualizaAluno,
-    removeAluno 
+    removeAluno,
 } from '../controllers/alunos.js';
 
 /* ROTAS DE /alunos */
