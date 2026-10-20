@@ -27,4 +27,21 @@ export const criaAluno = (req, res) => {
 export const atualizaAluno = (req, res) => {
     const id = parseInt(req.params.id);
     const alunoIndex = alunos.findIndex(a => a.id === id);
+    if(alunoIndex !== -1) {
+        alunos[alunoIndex] = { ...alunos[alunoIndex], ...req.body };
+        res.status(200).json("Aluno atualizado com sucesso");
+    }else {
+        res.status(404).json({ message: 'Aluno não encontrado' });
+    }
+}
+
+export const removeAluno = (req, res) => {
+    const id = parseInt(req.params.id);
+    const alunoIndex = alunos.findIndex(a => a.id === id);
+    if(alunoIndex !== -1) {
+        alunos.splice(alunoIndex, 1);
+        res.status(200).json("Aluno removido com sucesso");
+    }else {
+        res.status(404).json({ message: 'Aluno não encontrado' });
+    }
 }
