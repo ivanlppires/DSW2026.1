@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+footer{
+    background-color: #999;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-size:0.8em;
+}
+main{
+    padding: 20px;
+    min-height: calc(100vh - 95px); /* Ajuste para o tamanho do header e footer */
+    display: flex;
+    flex-direction: row;    
+}
+section {
+    width: 50%;
+}
+
