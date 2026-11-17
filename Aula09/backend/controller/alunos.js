@@ -1,7 +1,7 @@
 import db from './mysql.js';
 
 export const listar = async (req, res) => {
-    const [rows] = await db.query('SELECT * FROM alunos');
+    const [rows] = await db.query('SELECT * FROM alunos ORDER BY id DESC');
     res.json(rows);
 }
 export const criar = async (req, res) => {

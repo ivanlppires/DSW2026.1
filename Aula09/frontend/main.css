@@ -56,5 +56,13 @@ li div:nth-child(1){
     width: 60%;
 }
 li:hover{
-    background-color: #f0f0f0;
+    background-color: transparent;
+}
+button:hover{
+    background-color: #333;
+    color: #fff;
+}
+section#list > ul{
+    max-height: 80vh;
+    overflow-y: scroll;
 }
