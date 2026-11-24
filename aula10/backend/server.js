@@ -8,10 +8,10 @@ app.use(cors()); // Acesso liberado
 
 const validar = (req, res, next) => {
     const headers = req.headers;
-    const token = headers.authorization.split(' ')[1];
     if(!headers.authorization)
         res.status(403).send('Token não informado');
     
+    const token = headers.authorization.split(' ')[1];
     const tokenIsValid = jwt.verify(token, 'UNEMAT123');
     if (!tokenIsValid)
         res.status(403).send('Acesso negado');
@@ -33,7 +33,7 @@ app.post('/login', (req, res) => {
 });
 
 app.get('/clientes', validar, (req, res) => {
-    res.send('Lista de clientes');
+    res.json({ clientes: 'Lista de clientes' });
 });
 
 

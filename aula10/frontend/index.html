@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='ptbr'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Testando JWT</title>
+    <link rel='stylesheet' href='main.css'>
+    <script src='main.js' defer></script>
+</head>
+<body>
+    <form id='login-form'>
+        <h1>Login</h1>
+        <label for='username'>Usuário:</label>
+        <input type='text' id='user' name='user' required>
+        <label for='password'>Senha:</label>
+        <input type='password' id='pass' name='pass' required>
+        <button id="login-button" type='submit'>Entrar</button>
+    </form>
+    <div>
+        <h1>Clientes</h1>
+        <button id="client-button">Buscar clientes</button>
+        <hr>
+        <section id="client-list">
+        </section>
+    </div>
+</body>
+</html>
